@@ -1,0 +1,124 @@
+Dataset shape: (10886, 12)
+
+First 5 rows:
+              datetime  season  holiday  ...  casual  registered  count
+0  2011-01-01 00:00:00       1        0  ...       3          13     16
+1  2011-01-01 01:00:00       1        0  ...       8          32     40
+2  2011-01-01 02:00:00       1        0  ...       5          27     32
+3  2011-01-01 03:00:00       1        0  ...       3          10     13
+4  2011-01-01 04:00:00       1        0  ...       0           1      1
+
+[5 rows x 12 columns]
+Shape:
+(10886, 12)
+
+Columns:
+['datetime', 'season', 'holiday', 'workingday', 'weather', 'temp', 'atemp', 'humidity', 'windspeed', 'casual', 'registered', 'count']
+
+Data types:
+datetime       object
+season          int64
+holiday         int64
+workingday      int64
+weather         int64
+temp          float64
+atemp         float64
+humidity        int64
+windspeed     float64
+casual          int64
+registered      int64
+count           int64
+dtype: object
+
+Statistical summary:
+             season       holiday  ...    registered         count
+count  10886.000000  10886.000000  ...  10886.000000  10886.000000
+mean       2.506614      0.028569  ...    155.552177    191.574132
+std        1.116174      0.166599  ...    151.039033    181.144454
+min        1.000000      0.000000  ...      0.000000      1.000000
+25%        2.000000      0.000000  ...     36.000000     42.000000
+50%        3.000000      0.000000  ...    118.000000    145.000000
+75%        4.000000      0.000000  ...    222.000000    284.000000
+max        4.000000      1.000000  ...    886.000000    977.000000
+
+[8 rows x 11 columns]
+
+Missing values:
+datetime      0
+season        0
+holiday       0
+workingday    0
+weather       0
+temp          0
+atemp         0
+humidity      0
+windspeed     0
+casual        0
+registered    0
+count         0
+dtype: int64
+
+Number of duplicate rows:
+0
+             datetime  season  holiday  workingday  ...  month  day  hour  weekday
+0 2011-01-01 00:00:00       1        0           0  ...      1    1     0        5
+1 2011-01-01 01:00:00       1        0           0  ...      1    1     1        5
+2 2011-01-01 02:00:00       1        0           0  ...      1    1     2        5
+3 2011-01-01 03:00:00       1        0           0  ...      1    1     3        5
+4 2011-01-01 04:00:00       1        0           0  ...      1    1     4        5
+
+[5 rows x 17 columns]
+Index(['datetime', 'season', 'holiday', 'workingday', 'weather', 'temp',
+       'atemp', 'humidity', 'windspeed', 'count', 'year', 'month', 'day',
+       'hour', 'weekday'],
+      dtype='object')
+Training samples: 8708
+Testing samples: 2178
+Intercept = 7.855004923758571
+Slope = 9.064522154841193
+Best-Fit Line:
+y_hat = 7.8550 + (9.0645) * temp
+   Actual   Predicted       Error  Absolute Error
+0     127  312.604240 -185.604240      185.604240
+1      13   45.019546  -32.019546       32.019546
+2     163   97.049903   65.950097       65.950097
+3     233  275.439699  -42.439699       42.439699
+4     222  238.275158  -16.275158       16.275158
+5     166  134.214444   31.785556       31.785556
+6     144  134.214444    9.785556        9.785556
+7     376  320.037148   55.962852       55.962852
+8     601  104.482811  496.517189      496.517189
+9      53  141.647352  -88.647352       88.647352
+Observed value = 127
+Predicted value = 312.6042397695195
+Random error = -185.6042397695195
+Least Squares Slope: 9.0645221548412
+Least Squares Intercept: 7.855004923758429
+Temperature: 20
+Predicted bike rentals: 189.14544802058242
+Cost = 13888.779150445567
+Theta 0: 191.57647870286164
+Theta 1: 70.59127362798081
+   holiday  workingday  temp   atemp  ...  season_4  weather_2  weather_3  weather_4
+0        0           0  9.84  14.395  ...     False      False      False      False
+1        0           0  9.02  13.635  ...     False      False      False      False
+2        0           0  9.02  13.635  ...     False      False      False      False
+3        0           0  9.84  14.395  ...     False      False      False      False
+4        0           0  9.84  14.395  ...     False      False      False      False
+
+[5 rows x 17 columns]
+
+Number of features: 17
+Training: (8708, 17)
+Testing: (2178, 17)
+MAE: 105.08813447000935
+MSE: 19777.077611413013
+RMSE: 140.63099804599628
+R : 0.4008205520112397
+Adjusted R : 0.3961047878372541
+        Metric         Value
+0          MAE    105.088134
+1          MSE  19777.077611
+2         RMSE    140.630998
+3           R       0.400821
+4  Adjusted R       0.396105
